@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/edit_relative_image">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/edit_dish_image"
+                android:src="@drawable/placeholder_mana"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/btn_retake_pic"
+                android:layout_centerInParent="true"
+                android:id="@+id/imageView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/retake"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textRetake"
+                android:layout_below="@+id/imageView2"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextTitle"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:maxEms="50"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:hint="@string/write_a_headline"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextDescription"
+                android:layout_below="@+id/editTextTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:maxEms="250"
+                android:hint="@string/write_a_description" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_below="@+id/editTextDescription"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/inset_price" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="$"
+                android:id="@+id/currencySimbol"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textColor="#fff"
+                android:layout_marginLeft="17dp"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignLeft="@+id/imageView"
+                android:layout_alignStart="@+id/imageView"
+                android:layout_alignTop="@+id/imageView" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="5"
+                android:id="@+id/editTextPrice"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView" />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editTextPhone"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/phone_for_dish_orders" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@id/editTextPhone"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/edit_cuisine" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                android:layout_below="@id/edit_cuisine"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/line1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@id/line1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/edit_category" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                android:layout_below="@id/edit_category"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

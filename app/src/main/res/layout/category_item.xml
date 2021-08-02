@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/image_category_item"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_category_item"
+        android:layout_alignLeft="@id/image_category_item"
+        android:layout_alignRight="@id/image_category_item"
+        android:layout_alignTop="@id/image_category_item">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_category_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_category_item"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#22c6e9"
+                android:text=""
+                android:textColor="#fff" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

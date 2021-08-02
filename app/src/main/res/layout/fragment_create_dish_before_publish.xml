@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_before_publish"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_food4" />
+
+        <EditText
+            android:layout_margin="4dp"
+            android:id="@+id/editTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/image_before_publish"
+            android:layout_marginTop="10dp"
+            android:hint="@string/write_a_headline"
+            android:imeOptions="actionDone"
+            android:maxEms="50"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_margin="4dp"
+            android:textSize="20sp"
+            android:id="@+id/editTextDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editTextTitle"
+            android:layout_marginTop="10dp"
+            android:hint="@string/write_a_description"
+            android:maxEms="250"
+            android:maxLines="5" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/inset_price" />
+
+        <TextView
+            android:id="@+id/currencySimbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignLeft="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginLeft="17dp"
+            android:gravity="center"
+            android:text="$"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignRight="@+id/imageView"
+            android:layout_alignTop="@+id/imageView"
+            android:ems="5"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:nextFocusDown="@id/editTextPhone"
+            android:nextFocusForward="@id/editTextPhone" />
+
+        <EditText
+            android:layout_margin="4dp"
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/phone_for_dish_orders"
+            android:inputType="phone"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:id="@+id/linear_publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editTextPhone"
+            android:background="#ccffffff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="@string/tell_to_everyone"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/button_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@drawable/button_publish"
+                android:text="@string/publish"
+                android:textAllCaps="false"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

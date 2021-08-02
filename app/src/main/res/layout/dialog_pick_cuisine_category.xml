@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <co.lujun.androidtagview.TagContainerLayout
+        android:id="@+id/pick_tagcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        app:container_background_color="#f5f6f5"
+        app:container_border_color="#f5f6f5"
+        app:container_border_radius="0dp"
+        app:container_gravity="center"
+        app:horizontal_interval="10dp"
+        app:tag_background_color="#00000000"
+        app:tag_border_color="#ff6766"
+        app:tag_border_width="1dp"
+        app:tag_clickable="true"
+        app:tag_corner_radius="1dp"
+        app:tag_horizontal_padding="15dp"
+        app:tag_max_length="18"
+        app:tag_text_color="#ff6766"
+        app:tag_text_size="14sp"
+        app:tag_theme="none"
+        app:tag_vertical_padding="10dp"
+        app:vertical_interval="10dp" />
+
+    <TextView
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black_87"
+        android:textSize="20sp"
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/pick_tagcontainer"
+        android:text="OK" />
+</RelativeLayout>

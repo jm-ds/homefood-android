@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:title="@string/pref_currency"
+        android:defaultValue="USD"
+        android:entries="@array/currency_names"
+        android:entryValues="@array/currency_values"
+        android:dialogTitle="@string/pref_currency"
+        android:key="currency" />
+    <ListPreference
+        android:title="@string/pref_weight"
+        android:defaultValue="0"
+        android:entries="@array/weight_names"
+        android:entryValues="@array/weight_values"
+        android:dialogTitle="@string/pref_weight"
+        android:key="weight" />
+    <ListPreference
+        android:title="@string/pref_distance"
+        android:defaultValue="0"
+        android:entries="@array/distance_names"
+        android:entryValues="@array/distance_values"
+        android:dialogTitle="@string/pref_distance"
+        android:key="distance" />
+    <ListPreference
+        android:title="@string/pref_lang"
+        android:defaultValue="en"
+        android:entries="@array/language_names"
+        android:entryValues="@array/language_values"
+        android:dialogTitle="@string/pref_lang"
+        android:key="lang" />
+    <SwitchPreference
+        android:title="@string/pref_push"
+        android:defaultValue="false"
+        android:key="push" />
+    <Preference
+        android:title="@string/pref_logout"
+        android:key="logout" />
+    <Preference
+        android:title="@string/pref_terms"
+        android:key="terms" />
+
+</PreferenceScreen>

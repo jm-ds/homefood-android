@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f6f5"
+    android:layoutDirection="ltr">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/search_button_ui"
+        android:background="#f5f6f5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f5f6f5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/search_distance_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/distance"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#606060" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/search_distance_0km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/_0"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ff6766" />
+
+                <TextView
+                    android:id="@+id/search_distance_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/_20_km"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ff6766" />
+
+                <SeekBar
+                    android:id="@+id/search_distance_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/search_distance_km"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:max="20"
+                    android:progress="20" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/delivery"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_contains_milk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/contains_milk"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_vegetarian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/vegetarian"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_vegan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/vegan"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_gluten_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/gluten_free"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_sugar_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/sugar_free"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_main_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/main_course"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_suitable_for_dessert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/suitable_for_dessert"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_kosher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/kosher"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/search_switch_glat_kosher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/glat_kosher"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ff6766" />
+
+            <TextView
+                android:id="@+id/search_select_cuisine_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal"
+                android:text="@string/choose_cuisine"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#606060" />
+
+            <co.lujun.androidtagview.TagContainerLayout
+                android:id="@+id/search_tagcontainer_cuisines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                app:container_background_color="#f5f6f5"
+                app:container_border_color="#f5f6f5"
+                app:container_border_radius="0dp"
+                app:container_gravity="center"
+                app:horizontal_interval="10dp"
+                app:tag_background_color="#00000000"
+                app:tag_border_color="#ff6766"
+                app:tag_border_width="1dp"
+                app:tag_clickable="true"
+                app:tag_corner_radius="1dp"
+                app:tag_horizontal_padding="15dp"
+                app:tag_max_length="18"
+                app:tag_text_color="#ff6766"
+                app:tag_text_size="14sp"
+                app:tag_theme="none"
+                app:tag_vertical_padding="10dp"
+                app:vertical_interval="10dp" />
+
+            <TextView
+                android:id="@+id/search_select_category_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/choose_category"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#606060" />
+
+            <co.lujun.androidtagview.TagContainerLayout
+                android:id="@+id/search_tagcontainer_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                app:container_background_color="#f5f6f5"
+                app:container_border_color="#f5f6f5"
+                app:container_border_radius="0dp"
+                app:container_gravity="center"
+                app:horizontal_interval="10dp"
+                app:tag_background_color="#00000000"
+                app:tag_border_color="#ff6766"
+                app:tag_border_width="1dp"
+                app:tag_clickable="true"
+                app:tag_corner_radius="1dp"
+                app:tag_horizontal_padding="15dp"
+                app:tag_max_length="18"
+                app:tag_text_color="#ff6766"
+                app:tag_text_size="14sp"
+                app:tag_theme="none"
+                app:tag_vertical_padding="10dp"
+                app:vertical_interval="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/search_button_ui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#1dcaeb"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
